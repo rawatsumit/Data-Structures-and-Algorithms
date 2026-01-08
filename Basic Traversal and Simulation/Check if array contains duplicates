@@ -1,0 +1,26 @@
+//Check if array contains duplicates
+import java.util.*;
+
+public class Main
+{
+	static boolean checkDuplicates(int arr[]){
+	    if(arr == null | arr.length <2){
+	        return false;
+	    }
+	    Arrays.sort(arr);
+	    
+	    for(int i=1; i<arr.length; i++){
+	        if (arr[i] == arr[i-1]){
+	            return true;
+	        }
+	    }
+	    
+	    return false;
+	}
+	
+	public static void main(String[] args) {
+		int[] arr = {1,4,92,34,44,84,2,-3};
+		System.out.println("Does array contain duplicates: "+ checkDuplicates(arr));
+		
+	}
+}
