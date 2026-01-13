@@ -1,0 +1,24 @@
+// check if array is palindrome
+
+public class Main
+{
+    static Boolean checkPalindrome(char[] arr){
+        int left = 0;
+        int right = arr.length-1;
+        
+        while (left < right){
+            if(arr[left] != arr[right])
+                return false;
+        
+            left++;
+            right--;
+        }
+    return true;
+    }
+    
+	public static void main(String[] args) {
+		char[] arr = {'h', 'e','l','l','h'};
+		
+		System.out.println("Is the array palindrome: "+ checkPalindrome(arr));
+	}
+}
